@@ -1,0 +1,52 @@
+@import "./calculator.scss";
+@import "./shader-to-text.scss";
+
+$primary-color: #3b82f6;
+$secondary-color: #374151;
+$background-color: #111827;
+$text-color: #ffffff;
+
+.app-container {
+    min-height: 100vh;
+    background: $background-color;
+    color: $text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.nav-bar {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.tab-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background: $secondary-color;
+    color: $text-color;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+        background: lighten($secondary-color, 10%);
+    }
+
+    &.active {
+        background: $primary-color;
+    }
+}
+
+.content-container {
+    width: 100%;
+    max-width: 48rem;
+    padding: 1.5rem;
+    background: darken($background-color, 5%);
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
